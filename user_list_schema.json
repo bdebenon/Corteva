@@ -1,0 +1,28 @@
+// Old format
+{
+   "user_list_size": "integer, length of the user _list",
+   "user_list": [
+      {
+         "list_id": "integer, sequence number for this user in the file starting at 1",
+         "first name": "string, first name of this user",
+         "last name": "string, last name of this user",
+         "email": "string, email address of this user"
+      }
+   ]
+}
+
+// New format
+
+// Changes
+// 1. Removed spaces from key names
+// 2. Removed 'list_id' from 'user_list' keys. No need to have this as we are not preserving any meaningful ordering
+{
+   "user_list_size": "integer, length of the user _list",
+   "user_list": [
+      {
+         "first_name": "string, first name of this user",
+         "last_name": "string, last name of this user",
+         "email": "string, email address of this user"
+      }
+   ]
+}
